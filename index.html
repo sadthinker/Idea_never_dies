@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>أنا فكرة، والفكرة لا تموت</title>
+  <style>
+    body { background: #111; color: #f1f1f1; font-family: "Tajawal", sans-serif; text-align: center; padding: 40px; }
+    h1 { font-size: 3em; color: #e91e63; margin-bottom: 10px; }
+    p { font-size: 1.2em; margin-bottom: 30px; }
+    textarea { width: 90%; height: 100px; padding: 10px; font-size: 1em; border-radius: 8px; border: none; margin-bottom: 10px; }
+    button { background-color: #e91e63; color: white; border: none; padding: 10px 20px; font-size: 1em; cursor: pointer; border-radius: 6px; }
+    .signature { margin-top: 30px; font-style: italic; color: #999; }
+    .footer { margin-top: 60px; font-size: 0.9em; color: #555; border-top: 1px solid #333; padding-top: 15px; }
+  </style>
+</head>
+<body>
+  <h1>أنا فكرة، والفكرة لا تموت</h1>
+  <p>هذه الصفحة تمثل صوتًا صادقًا خرج من عقل المفكر الحزين ليبقى حيًّا في قلوب من يشعرون.</p>
+  <textarea id="feedback" placeholder="اكتب أثر الفكرة عليك..."></textarea><br/>
+  <button onclick="sendFeedback()">أرسل رأيك الرمزي</button>
+  <div class="signature">– المفكر الحزين</div>
+  <div class="footer">✨ فكرة حية من عقل المفكر الحزين – 2025 ©</div>
+  <script>
+    function sendFeedback() {
+      const feedback = document.getElementById('feedback').value.trim();
+      if (!feedback) { alert("اكتب شيئًا أولاً."); return; }
+      alert("شكرًا لك. تم تسجيل رأيك الرمزي محليًا.");
+      document.getElementById('feedback').value = "";
+    }
+  </script>
+</body>
+</html>
